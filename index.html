@@ -1,70 +1,127 @@
- <html>
+<html>
 
-
-<head>
-    <title> Agrim Bansal </title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Pangolin" rel="stylesheet">
+    <head>
+        <title> Agrim Bansal </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="src/icon.jpg" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Pangolin" rel="stylesheet">
         <link rel="stylesheet" href="style.css" />
     </head>
     
-    
     <body id="body" >
-    
-    <section>
-        <div id ="header" >    
-            <h1 id="name" class="c1"> Agrim Bansal </h1>
-            
-            <div id="anim1_holder">
-                <h3 class="anim1">I am&ThinSpace;</h1>
-                <h3 id="me" class="anim1"></h2>
-                <h3 id="caret" class="anim1">&ThinSpace;|</h1>
-            </div>  
-
-        </div>
-
-        <a href="#About_Me" class="arrow down"><img src="assets/down-arrow.png"></a>
-    </section>
-    
 
     <nav id="navbar" class='.navbar'>
-        <a  href="index.html" class="nav_content"> Home </a>
-        <a  href="#" class="nav_content"> Me </a>
-        <a  href="#" class="nav_content"> Projects </a> 
-        <a  href="#" class="nav_content"> Competitions </a>
-        <a  href="#" class="nav_content">Contact Me </a>
+        <a  href="#Header" class="nav_content" onclick="rem_dark(); rem_navbar()"> Home </a>
+        <a  href="#about-anchor" class="nav_content" onclick="add_dark(); rem_navbar()"> About Me </a>
+        <a  href="#projects-anchor" class="nav_content" onclick="add_dark(); rem_navbar()"> Projects </a> 
+        <a  href="#contact-anchor" class="nav_content" onclick="rem_dark(); rem_navbar()">Contact</a>
     </nav>
-    
+
     <div id="nav_activator">
         <div class="span"></div>
         <div class="span"></div>
         <div class="span"></div>
     </div>
-
     
-    <section>
-        <div id="About_Me">
+    <section id ="Header" >
+
+        <h1 id="name" class="c1"> Agrim Bansal </h1>
+        
+        <div id="I_am_anim_holder">
+            <h3 class="I_am_anim">I am&ThinSpace;</h1>
+            <h3 id="me" class="I_am_anim"></h2>
+            <h3 id="caret" class="I_am_anim">|</h1>
+        </div>  
+
+        <a href="#about-anchor" class="arrow down" onclick="add_dark()"><img src="src/down-arrow.png"></a>
+    </section>
+    
+    
+    <section id="About_Me">
+            <div id="about-anchor" class="anchor"></div>
             <h1>About Me</h1>
-
-            <div class="tile">
-                I am an Indian High School student passionate about building cool stuff. I love Mathematics and taking on tough challenges.
-                I want to be a Software Engineer.
+            
+            <div class="about_me_div">
+                <img id="my_pic" src="src/my_photo.jpg" alt="My Picture">
+                I am a sophomore at the India Institute of Technology Delhi pursuing an undergraduate program in computer science and engineering. I like building things- both techy and not. 
+                I like taking on challenges and solving intriguing problems. I have a wide variety of interests ranging from reading fiction (sci-fi, thriller and mystery) to making websites, apps, iot devices and ML models and to playing badminton and football.
+                These also include origami, gaming, mythology, homelabbing and the best of all- trying out new things.
             </div>
-            
 
-            <a href="#header" class="arrow up"><img src="assets/down-arrow.png"></a>
-            <a href="#navbar" class="arrow down"><img src="assets/down-arrow.png"></a>
-            
-        </div>
+            <a href="#Header" class="arrow up" onclick="rem_dark()"><img src="src/down-arrow.png"></a>
+            <a href="#projects-anchor" class="arrow down" onclick="add_dark()"><img src="src/down-arrow.png"></a>            
     </section>
 
+    <section id="Projects">
+        <div id="projects-anchor" class="anchor"></div>
+
+        <h1>My Projects</h1>
+        
+        <div id="projects_container">
+            <!-- <div class="project_tile">
+                <div onclick="window.open('https:\/\/projects.agrimbansal.com/class-schedule')">
+                <img src="src/class-schedule-preview.jpg" class="project_thumbnail"/>
+                <div class="project_title">Class Schedule</div>
+                <div class="project_info">A website and chrome-extension to keep record of my online classes built with ExpressJS and Airtable database</div>
+                </div>
+                <a href="https://github.com/Agrim-Bansal/class-schedule" target="_blank" class="redirect"> <img class="github-repo redirect" src="src/github-logo.png"> </a>
+            </div> -->
+
+            <!-- Add More Projects HERE -->
+
+        </div>
+
+        <a href="#about-anchor" class="arrow up" onclick="add_dark()"><img src="src/down-arrow.png"></a>
+        <a href="#contact-anchor" class="arrow down" onclick="rem_dark()"><img src="src/down-arrow.png"></a>            
+    </section>
+
+    <section id="Contact">
+        <div id="contact-anchor" class="anchor"></div>
+        <h1>Contact Me</h1>
+
+        <div id="contact_links">
+            <div id="contact_me_text">Find Me At</div>
+            
+            <div class="social-container icon-1-container">
+                <div class="socials">
+                    <a href="https://github.com/Agrim-Bansal" target="_blank"><img src="src/github-logo.png" class="social-icons icon-1"/></a>
+                </div>
+            </div>
+    
+            <div class="social-container icon-2-container">
+                <div class="socials">
+                    <a title="Mail me at dev@agrimbansal.com" href="mailto:dev@agrimbansal.com" target="_blank"><img src="src/mail-icon.png" class="social-icons icon-2"/></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contact_me_div">
+            I am always open to connecting with people and talking. 
+            I love discussing about any and everything- new ideas, books, movies, interesting technologies, philosophy or just random shower thoughts.
+        </div>
+        
+        <div class="contact_me_div">
+            Unfortunately, I am not on social media like Instagram, Snapchat or Reddit but I can be easily reached via <a class="contact-embedded-link" href="mailto:dev@agrimbansal.com">Email</a> which I check regularly. 
+            Don't hesitate and just send me a simple "Hi". I'm also on <a href="https://github.com/Agrim-Bansal" class="contact-embedded-link" target="_blank">Github</a> where I put up pretty much all of my projects. 
+        </div>
+
+        <div class="contact_me_div">
+            If you are a recruiter, here is a <a href="src/resume.pdf" class="contact-embedded-link" target="_blank">link to my resume</a>.
+            Feel free to reach out to me if you have any opportunities which might be a good fit.
+        </div>
+
+        <a href="#projects-anchor" class="arrow up" onclick="add_dark()"><img src="src/down-arrow.png"></a>
+
+
+
+</section>
+
+
+    <section></section>
         
     <script src="index.js"></script>
-
-
+    <script src="addProjects.js"></script>
 </body>
-
-
-
 </html>
